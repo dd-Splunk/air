@@ -1,0 +1,1 @@
+{"board_id": "@BOARD_ID", "board_type": "@BOARD_TYPE", "sensor_type": "@SENSOR_TYPE", "metric_name:air.temperature": @TEMPERATURE, "metric_name:air.humidity": @HUMIDITY}
