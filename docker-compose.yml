@@ -8,7 +8,8 @@ services:
     container_name: so1
     environment:
       - SPLUNK_START_ARGS=--accept-license
-      - SPLUNK_APPS_URL=https://github.com/dd-Splunk/${SPLUNK_APP}/releases/download/latest/${SPLUNK_APP}.spl
+      - SPLUNK_APPS_URL=https://github.com/dd-Splunk/${SPLUNK_APP}/releases/download/latest/${SPLUNK_APP}.spl,https://splunkbase.splunk.com/app/1924/release/7.2.1/download
+      - SPLUNKBASE_USERNAME
       - SPLUNKBASE_PASSWORD
       - SPLUNK_PASSWORD
       - JAVA_VERSION=openjdk:8
