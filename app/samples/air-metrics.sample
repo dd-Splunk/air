@@ -1,1 +1,1 @@
-{"board_id": "@BOARD_ID", "board_type": "@BOARD_TYPE", "sensor_type": "@SENSOR_TYPE", "metric_name:air.temperature": @TEMPERATURE, "metric_name:air.humidity": @HUMIDITY}
+{"board_id": "@BOARD_ID", "board_type": "@BOARD_TYPE", "sensor_type": "@SENSOR_TYPE", "metric_name:air.temperature": @TEMPERATURE, "metric_name:air.humidity": @HUMIDITY, "metric_name:air.SDS_P1": @SDS_P1, "metric_name:air.SDS_P2": @SDS_P2}
