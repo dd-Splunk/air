@@ -16,9 +16,9 @@ services:
       - TZ=${TZ}
     ports:
       - 8000:8000
+      - 8088:8088
       - 8089:8089
-      - 9998:9998
-      - 9999:9999
+      - 9997:9997
     volumes:
       - so1-var:/opt/splunk/var
       - so1-etc:/opt/splunk/etc
