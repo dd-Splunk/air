@@ -33,7 +33,7 @@
       <chart>
         <title>air.temperature</title>
         <search>
-          <query>| mstats avg(_value) prestats=true WHERE metric_name="air.temperature" AND index="air-metrics" AND board_id="2511780" $mstats_span$ BY board_id
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="air.temperature" AND index="air-metrics"  $mstats_span$ BY board_id
 | timechart avg(_value) $timechart_span$ agg=max limit=5 useother=false BY board_id
 | fields - _span*</query>
           <earliest>$global_time_tok.earliest$</earliest>
@@ -63,7 +63,7 @@
       <chart>
         <title>air.humidity</title>
         <search>
-          <query>| mstats avg(_value) prestats=true WHERE metric_name="air.humidity" AND index="air-metrics" AND board_id="2511780" $mstats_span$ BY board_id
+          <query>| mstats avg(_value) prestats=true WHERE metric_name="air.humidity" AND index="air-metrics"  $mstats_span$ BY board_id
 | timechart avg(_value) $timechart_span$ agg=max limit=5 useother=false BY board_id
 | fields - _span*</query>
           <earliest>$global_time_tok.earliest$</earliest>
@@ -113,6 +113,7 @@
           <refreshType>delay</refreshType>
         </search>
         <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.text">μg/m3</option>
         <option name="charting.axisY.abbreviation">auto</option>
         <option name="charting.chart">line</option>
         <option name="charting.chart.nullValueMode">connect</option>
