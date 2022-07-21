@@ -22,4 +22,4 @@ To generate some demo data:
 ## To Do
 
 - [x] ...
-- [ ] …
+- [ ] Increment Splunk App version number
