@@ -24,7 +24,7 @@ jobs:
       - name: AppInspect
         uses: splunk/appinspect-cli-action@v1
         with:
-           app_path: ${APP_NAME}
+           app_path: 'air'
       - name: Create spl
         run: |
           COPYFILE_DISABLE=1 tar -cvzf ${APP_NAME}.spl ${APP_NAME}
