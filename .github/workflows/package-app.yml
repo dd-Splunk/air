@@ -18,13 +18,14 @@ jobs:
       # ...
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Rename app
-        run: |
-          mv app ${APP_NAME}
+
       - name: AppInspect
         uses: splunk/appinspect-cli-action@v1
         with:
-           app_path: 'air'
+           app_path: 'app'
+      - name: Rename app
+        run: |
+          mv app ${APP_NAME}
       - name: Create spl
         run: |
           COPYFILE_DISABLE=1 tar -cvzf ${APP_NAME}.spl ${APP_NAME}
