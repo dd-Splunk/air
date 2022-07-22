@@ -5,6 +5,10 @@ on:
   push:
     branches:
       - main
+
+env:
+  APP_NAME: ${{ github.event.repository.name }}
+
 jobs:
   tagged-release:
     name: "Package App"
@@ -14,12 +18,12 @@ jobs:
       # ...
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Create spl
+      - name: Rename app
         run: |
           mv app ${APP_NAME}
+      - name: Create spl
+        run: |
           COPYFILE_DISABLE=1 tar -cvzf ${APP_NAME}.spl ${APP_NAME}
-        env:
-          APP_NAME: ${{ github.event.repository.name }}
       - name: Release spl
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
