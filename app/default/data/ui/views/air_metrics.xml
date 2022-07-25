@@ -41,6 +41,7 @@
           <refresh>5m</refresh>
           <refreshType>delay</refreshType>
         </search>
+        <option name="numberPrecision">0.0</option>
         <option name="charting.axisTitleX.visibility">collapsed</option>
         <option name="charting.axisTitleY.text">°C</option>
         <option name="charting.axisTitleY.visibility">visible</option>
