@@ -13,6 +13,13 @@ echo "Wait for Splunk availability"
 # # https://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex
 # sessionKey=${BASH_REMATCH[1]}
 
+echo "Change App permission to Global"
+until curl -s -f -o /dev/null -k -u admin:$SPLUNK_PASSWORD --request POST 'https://localhost:8089//services/apps/local/{{appName}}/acl' -d sharing=global -d owner=nobody
+do
+  echo -n '.'
+  sleep 10
+done
+#
 echo "Enable EventGen"
 until curl -s -f -o /dev/null -k -u admin:$SPLUNK_PASSWORD --request POST 'https://localhost:8089/servicesNS/nobody/SA-Eventgen/data/inputs/modinput_eventgen/default/enable'
 do
