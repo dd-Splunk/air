@@ -37,4 +37,3 @@ spl:
 token:
 	echo "Creating Admin token"
 	./token.sh
-

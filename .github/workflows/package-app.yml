@@ -1,19 +1,19 @@
 ---
   name: "package-app"
-  
+
   on:
     push:
       branches:
         - main
-  
+
   env:
     APP_NAME: ${{ github.event.repository.name }}
-  
+
   jobs:
     tagged-release:
       name: "Package App"
       runs-on: "ubuntu-latest"
-  
+
       steps:
         # ...
         - name: Checkout
